@@ -1,4 +1,4 @@
-#wkTestStuff v. 0.1.0
+# wkTestStuff v. 0.1.0
 _Worms Armageddon wormkit module that adds some debugging commands to in-game chat. Useful for testing stuff. Use with debug console. Most commands will desynchronize the game, so don't use it in multiplayer games._
 
 ## Commands:
