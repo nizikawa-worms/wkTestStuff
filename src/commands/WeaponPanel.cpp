@@ -42,8 +42,8 @@ _asm docall:
 void WeaponPanel::install() {
 	transparencyMode = parseMode(Config::getPanelTransparency());
 	DWORD addrDrawWeaponPanel = _ScanPattern("DrawWeaponPanel", "\x8B\x86\x00\x00\x00\x00\x83\xEC\x10\x85\xC0\x53\x55\x57\x0F\x84\x00\x00\x00\x00\x8B\x5E\x50\x8B\x7E\x4C\x8B\x0E\x8B\x81\x00\x00\x00\x00\x6A\x00\x53\x57\x6A\x00\x50\x8B\x81\x00\x00\x00\x00", "??????xxxxxxxxxx????xxxxxxxxxx????xxxxxxxxx????");
-	// addrDrawWeaponPanel = 005695A2
-	DWORD addrDrawWeaponPanel_patch1 = addrDrawWeaponPanel + 0x22;
+	// addrDrawWeaponPanel = 0x569580
+	DWORD addrDrawWeaponPanel_patch1 = addrDrawWeaponPanel + 0x22; // 0x005695A2
 	addrDrawWeaponPanel_ret = addrDrawWeaponPanel + 0x29;
 	_HookAsm(addrDrawWeaponPanel_patch1, (DWORD) &DrawWeaponPanel_patch1);
 }
