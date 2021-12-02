@@ -16,6 +16,7 @@ private:
 	static inline bool devConsoleEnabled = true;
 	static inline bool ignoreVersionCheck = false;
 	static inline bool useOffsetCache = true;
+	static inline std::string panelTransparency = "off";
 
 	static inline std::filesystem::path waDir;
 public:
@@ -33,6 +34,8 @@ public:
 
 	static bool isUseOffsetCache();
 	static std::string getWaVersionAsString();
+
+	static const std::string &getPanelTransparency();
 };
 
 

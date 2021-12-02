@@ -8,6 +8,7 @@
 #include "commands/Ammo.h"
 #include "commands/Delete.h"
 #include "commands/Objects.h"
+#include "commands/WeaponPanel.h"
 #include "W2App.h"
 
 int Chat::onChatInput(int a1, char * msg, int a3) {
@@ -78,6 +79,7 @@ void Chat::install() {
 	registerCommand("delay", std::make_unique<Ammo>());
 	registerCommand("delete", std::make_unique<Delete>());
 	registerCommand("objects", std::make_unique<Objects>());
+	registerCommand("panel", std::make_unique<WeaponPanel>());
 
 }
 

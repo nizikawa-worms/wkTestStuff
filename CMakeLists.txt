@@ -35,7 +35,7 @@ add_library(wkTestStuff SHARED
         src/commands/Help.cpp src/commands/Help.h
         src/commands/Ammo.cpp src/commands/Ammo.h
         src/commands/Delete.cpp src/commands/Delete.h
-        src/commands/Objects.cpp src/commands/Objects.h)
+        src/commands/Objects.cpp src/commands/Objects.h src/commands/WeaponPanel.cpp src/commands/WeaponPanel.h)
 
 set_property(TARGET wkTestStuff hacklib PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 

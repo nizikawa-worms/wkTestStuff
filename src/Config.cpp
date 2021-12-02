@@ -17,6 +17,10 @@ void Config::readConfig() {
 	useOffsetCache = GetPrivateProfileIntA("general", "UseOffsetCache", 1, inipath.c_str());
 	ignoreVersionCheck = GetPrivateProfileIntA("general", "IgnoreVersionCheck", 0, inipath.c_str());
 	devConsoleEnabled = GetPrivateProfileIntA("debug", "EnableDevConsole", 0, inipath.c_str());
+
+	char buff[128];
+	GetPrivateProfileStringA("WeaponPanel", "Transparency", "off", buff, sizeof(buff), inipath.c_str());
+	panelTransparency = buff;
 }
 
 bool Config::isDevConsoleEnabled() {
@@ -88,7 +92,7 @@ std::string Config::getModuleStr() {
 	return "wkTestStuff";
 }
 std::string Config::getVersionStr() {
-	return "v0.1.0";
+	return "v0.2.0";
 }
 
 std::string Config::getBuildStr() {
@@ -112,4 +116,8 @@ std::string Config::getWaVersionAsString() {
 	auto version = GetModuleVersion(0);
 	sprintf_s(buff, "%u.%u.%u.%u", PWORD(&version)[3], PWORD(&version)[2], PWORD(&version)[1], PWORD(&version)[0]);
 	return buff;
+}
+
+const std::string &Config::getPanelTransparency() {
+	return panelTransparency;
 }

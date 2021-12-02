@@ -1,7 +1,7 @@
 
 1 VERSIONINFO
-FILEVERSION 0,0,1,0
-PRODUCTVERSION 0,0,1,0
+FILEVERSION 0,0,2,0
+PRODUCTVERSION 0,0,2,0
 FILEOS 0x4
 FILETYPE 0x1
 {
@@ -12,12 +12,12 @@ BLOCK "StringFileInfo"
 		VALUE "Comments", ""
 		VALUE "CompanyName", "Nizikawa"
 		VALUE "FileDescription", "Fun things are fun!"
-		VALUE "FileVersion", "0.0.1.0"
-		VALUE "InternalName", "wkTestStuff v0.1.0"
+		VALUE "FileVersion", "0.0.2.0"
+		VALUE "InternalName", "wkTestStuff v0.2.0"
 		VALUE "LegalCopyright", "Nizikawa"
 		VALUE "OriginalFilename", "wkTestStuff.dll"
-		VALUE "ProductName", "wkTestStuff v0.1.0"
-		VALUE "ProductVersion", "0.0.1.0"
+		VALUE "ProductName", "wkTestStuff v0.2.0"
+		VALUE "ProductVersion", "0.0.2.0"
 	}
 }
 
